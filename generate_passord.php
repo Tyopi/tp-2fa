@@ -1,5 +1,8 @@
 <?php
 
+session_start();
+
+ 
 
 /*  CONNEXION BDD
  
@@ -28,6 +31,7 @@ $result = [
     'secret_2fa' => '',
     'twofa_enabled' => 0,
 ];
+$_SESSION['user'] = $result;
 
 echo "</br>";
 echo $result['password'];
@@ -42,8 +46,8 @@ $result = $db->query('UPDATE users SET password = $hasher WHERE email = $result[
 
 */
 
-$result['password'] = $hasher;
-
+$_SESSION['user']['password'] = $hasher;
+$_SESSION['BDD'] = $_SESSION['user'];
 
 ?>
 
