@@ -37,7 +37,7 @@ if (isset($_POST['deconexion'])) {
         <input type="submit"  name="conexion" value="connexion"> </br>
     </form>
 
-    <?php if (isset($_GET['echec'])) { echo"mot de passe ou email incorect";}?>
+    <?php if (isset($_GET['echec']) && $_GET['echec']== 2) { echo"mot de passe ou email incorect";} elseif(isset($_GET['echec']) && $_GET['echec']== 1){ echo"temps expirer";}?>
 
 <?php }else{ ?>
 
@@ -53,6 +53,9 @@ if (isset($_POST['deconexion'])) {
     <form method="post">
         <input type="submit"  name="deconexion" value="deconexion">
     </form>
+
+
+
 <?php } ?>
 
 
