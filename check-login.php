@@ -53,7 +53,7 @@ if (isset($_POST['conexion'])) {
                 ];
                 unset($_SESSION['tfa_secret_temp']);
 
-                if ($_SESSION['user']["tfa_secret"] == ''){
+                if ($_SESSION['user']["tfa_secret"] != ''){
                     header("Location: check-2fa.php");
                     exit;
                 }else{
