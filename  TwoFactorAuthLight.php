@@ -14,7 +14,7 @@ class TwoFactorAuthLight
     public function getQRCodeUrl(string $label, string $secret, string $issuer = 'TP-2FA'): string
     {
         // Label recommandé: "TP-2FA:user@test.fr"
-        13
+
         return 'otpauth://totp/' . rawurlencode($label)
         . '?secret=' . rawurlencode($secret)
         . '&issuer=' . rawurlencode($issuer)
@@ -77,6 +77,6 @@ class TwoFactorAuthLight
     $binary .= chr(bindec(substr($bits, $i, 8)));
     }
     return $binary;
-    14
+
     }
 }
