@@ -39,8 +39,7 @@ echo "<p>Clé secrète : <code>" . h($secret) . "</code></p>";
 echo "<p>TimeSlice courant : <code>" . h($currentTimeSlice) . "</code></p>";
 echo "<h3> Codes TOTP autour de maintenant</h3>";
 echo "<table border='1' cellpadding='5' style='border-collapse: collapse;'>";
-echo "<tr><th>Décalage</th><th>TimeSlice</th><th>Début</th><th>Fin</th><th>Code</
-th><th>Match ?</th></tr>";
+echo "<tr><th>Décalage</th><th>TimeSlice</th><th>Début</th><th>Fin</th><th>Code</th><th>Match ?</th></tr>";
 for ($i = -3; $i <= 3; $i++) {
 $timeSlice = $currentTimeSlice + $i;
 $startTs = $timeSlice * 30;
