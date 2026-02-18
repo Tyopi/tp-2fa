@@ -37,6 +37,8 @@ if (isset($_POST['deconexion'])) {
         <input type="submit"  name="conexion" value="connexion"> </br>
     </form>
 
+    <?php if (isset($_GET['echec'])) { echo"mot de passe ou email incorect";}?>
+
 <?php }else{ ?>
 
     <h1> VOS INFORMATION</h1>

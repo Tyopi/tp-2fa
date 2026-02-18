@@ -65,6 +65,8 @@ if (isset($_POST['conexion'])) {
             }
 
     }
+    header("Location: login.php?echec=true");
+    exit;
 
 
 }
